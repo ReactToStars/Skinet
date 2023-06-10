@@ -14,14 +14,14 @@ namespace Core.Specifications
             AddOrderBy(x => x.Name);
             ApplyPaging(productParams.PageSize * (productParams.PageIndex-1), productParams.PageSize);
 
-            if(String.IsNullOrEmpty(productParams.Sort))
+            if(!String.IsNullOrEmpty(productParams.Sort))
             {
                 switch(productParams.Sort)
                 {
                     case "priceAsc":
                         AddOrderBy(x => x.Price);
                         break;
-                    case "priceDsc":
+                    case "priceDesc":
                         AddOrderByDescending(x => x.Price);
                         break;
                     default:
