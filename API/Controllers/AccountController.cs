@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using API.Extensions;
 using AutoMapper;
+using Core.Entities.Identity;
 
 namespace API.Controllers
 {

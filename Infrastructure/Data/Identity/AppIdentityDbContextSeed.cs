@@ -1,4 +1,4 @@
-using Core.Entities;
+using Core.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure.Data.Identity
@@ -21,7 +21,7 @@ namespace Infrastructure.Data.Identity
                         Street = "10 The Street",
                         City = "New York",
                         State = "NY",
-                        ZipCode = "90210"
+                        Zipcode = "90210"
                     }
                 };
 
