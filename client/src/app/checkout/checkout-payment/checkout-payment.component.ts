@@ -5,7 +5,6 @@ import { CheckoutService } from '../checkout.service';
 import { ToastrService } from 'ngx-toastr';
 import { Basket } from 'src/app/shared/models/basket';
 import { Address } from 'src/app/shared/models/user';
-import { OrderToCreat } from 'src/app/shared/models/order';
 import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
