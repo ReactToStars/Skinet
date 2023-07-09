@@ -2,14 +2,14 @@
  mb-3 bg-white border-bottom fixed-top shadow-sm">
     <img class="logo" src="/assets/images/logo.png" alt="logo" style="max-height: 70px;" routerLink="/">
     <nav class="my-2 text-uppercase text-dark fs-3">
-        <a class="p-2" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="p-2" routerLink="/shop" routerLinkActive="active">Shop</a>
-        <a class="p-2" routerLink="/test-error" routerLinkActive="active">Errors</a>
+        <a class="p-2" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;">Home</a>
+        <a class="p-2" routerLink="/shop" routerLinkActive="active" style="cursor: pointer;">Shop</a>
+        <a class="p-2" routerLink="/test-error" routerLinkActive="active" style="cursor: pointer;">Errors</a>
     </nav>
     <div class="d-flex align-items-center">
         <a routerLink="/basket" class="position-relative">
             <i class="fa fa-shopping-cart fa-2x me-5 text-dark"></i>
-            <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no">
+            <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no" style="cursor: pointer;">
                 {{getCount(basket.items)}}
             </div>
         </a>

@@ -3,8 +3,8 @@
         <div class="col-6 form-group" *ngFor="let method of deliveryMethods">
             <input type="radio"
                 class="form-check-input"
-                [value]="method.id"
-                [id]="method.id"
+                value={{method.id}}
+                id={{method.id}}
                 formControlName="deliveryMethod"
                 (click)="setShippingPrice(method)"
             >
@@ -21,7 +21,7 @@
     <button class="btn btn-outline-primary" cdkStepperPrevious>
         <i class="fa fa-angle-left"></i> Back to Address
     </button>
-    <button class="btn btn-primary" cdkStepperNext>
+    <button [disabled]="checkoutForm?.get('deliveryForm')?.invalid" class="btn btn-primary" cdkStepperNext>
         Go to Review <i class="fa fa-angle-right"></i> 
     </button>
 </div>
